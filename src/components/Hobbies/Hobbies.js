@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   FaMountain, FaPencilAlt, FaCamera, FaGamepad, 
-  FaFilm, FaMusic, FaBook, FaPalette 
+  FaFilm, FaBook 
 } from 'react-icons/fa';
 import './Hobbies.css';
 

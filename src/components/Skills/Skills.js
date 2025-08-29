@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaJava, 
-  FaMicrosoft, FaDatabase, FaMobile, FaTools, FaDrawPolygon,
+  FaDatabase, FaMobile, FaTools, FaDrawPolygon,
   FaRulerCombined, FaPalette, FaCamera, FaPencilRuler
 } from 'react-icons/fa';
 import { SiMongodb, SiPostman, SiAutocad, SiSketchup } from 'react-icons/si';
