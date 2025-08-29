@@ -1,0 +1,316 @@
+.experience-section {
+  background: linear-gradient(135deg, #111A26 0%, #403E22 100%);
+  padding: 100px 0;
+  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(135deg, #A68E46 0%, #735A2C 100%);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  padding: 2rem 0;
+  position: relative;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #A68E46;
+  border: 4px solid #111A26;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 4px rgba(166, 142, 70, 0.2);
+  z-index: 2;
+}
+
+.timeline-item.left::before {
+  left: calc(50% - 10px);
+}
+
+.timeline-item.right::before {
+  left: calc(50% - 10px);
+}
+
+.timeline-content {
+  width: 45%;
+  padding: 2rem;
+  background: rgba(17, 26, 38, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(166, 142, 70, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: #A68E46;
+}
+
+.timeline-item.left .timeline-content {
+  left: 0;
+}
+
+.timeline-item.right .timeline-content {
+  left: 55%;
+}
+
+.timeline-header {
+  margin-bottom: 1.5rem;
+}
+
+.job-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #A68E46;
+  margin-bottom: 1rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.company-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #DCE6F2;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.company-info span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.company-info svg {
+  color: #A68E46;
+}
+
+.job-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #F7FAFC;
+  margin-bottom: 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.technologies, .achievements {
+  margin-bottom: 1.5rem;
+}
+
+.technologies h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #A68E46;
+  margin-bottom: 1rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, #A68E46 0%, #735A2C 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(166, 142, 70, 0.3);
+}
+
+.achievements h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #A68E46;
+  margin-bottom: 1rem;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements li {
+  color: white;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.achievements li::before {
+  content: '•';
+  color: #A68E46;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Portfolio Link Styles */
+.portfolio-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #A68E46 0%, #735A2C 100%);
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.portfolio-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(166, 142, 70, 0.3);
+  border-color: #A68E46;
+  color: white;
+}
+
+.experience-summary {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.summary-card {
+  background: rgba(220, 230, 242, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  border: 1px solid rgba(220, 230, 242, 0.2);
+}
+
+.summary-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #A68E46;
+  margin-bottom: 1.5rem;
+}
+
+.summary-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #DCE6F2;
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item::before {
+    left: 20px;
+  }
+
+  .timeline-content {
+    width: calc(100% - 60px);
+    left: 60px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item::before {
+    left: 10px;
+  }
+
+  .timeline-content {
+    width: calc(100% - 40px);
+    left: 40px !important;
+    padding: 1.5rem;
+  }
+
+  .company-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tech-tags {
+    justify-content: center;
+  }
+
+  .summary-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .summary-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .summary-card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-item::before {
+    left: 5px;
+  }
+
+  .timeline-content {
+    width: calc(100% - 30px);
+    left: 30px !important;
+    padding: 1rem;
+  }
+
+  .job-title {
+    font-size: 1.3rem;
+  }
+
+  .company-info {
+    font-size: 0.8rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Animation delays for staggered entrance */
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.3s; }
+.timeline-item:nth-child(3) { animation-delay: 0.5s; }

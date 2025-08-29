@@ -1,0 +1,77 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #A68E46 0%, #735A2C 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 20px rgba(166, 142, 70, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(166, 142, 70, 0.4);
+  background: linear-gradient(135deg, #735A2C 0%, #A68E46 100%);
+}
+
+.scroll-to-top:active {
+  transform: translateY(-2px);
+}
+
+/* Animation for entrance */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Focus styles for accessibility */
+.scroll-to-top:focus {
+  outline: 2px solid #A68E46;
+  outline-offset: 2px;
+}
+
+/* Hover effect for touch devices */
+@media (hover: none) {
+  .scroll-to-top:hover {
+    transform: none;
+    box-shadow: 0 4px 20px rgba(166, 142, 70, 0.3);
+  }
+}

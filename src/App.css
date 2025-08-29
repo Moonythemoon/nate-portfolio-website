@@ -1,0 +1,248 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 2rem;
+  padding-top: 6rem;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background: linear-gradient(135deg, #111A26 0%, #403E22 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #A68E46;
+}
+
+/* Global color variables */
+:root {
+  --primary-dark: #111A26;
+  --primary-olive: #403E22;
+  --accent-gold: #A68E46;
+  --accent-brown: #735A2C;
+  --light-blue: #DCE6F2;
+}
+
+/* CSS Reset and Global styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(135deg, #111A26 0%, #403E22 100%);
+  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+.section-container {
+  background: rgba(17, 26, 38, 0.4);
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 2.5rem;
+  border: 1px solid rgba(166, 142, 70, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Global section title styles - HIGH PRIORITY */
+.section-title,
+h2.section-title,
+h1.section-title,
+h3.section-title {
+  color: white !important;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+  border: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  background: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Remove any decorative lines from all sections */
+.section-title::before,
+.section-title::after,
+.section-title:before,
+.section-title:after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Force white color on ALL section titles with maximum specificity */
+#skills .section-title,
+#experience .section-title,
+#projects .section-title,
+#education .section-title,
+#hobbies .section-title,
+#contact .section-title,
+.skills-section .section-title,
+.experience-section .section-title,
+.projects-section .section-title,
+.education-section .section-title,
+.hobbies-section .section-title,
+.contact-section .section-title {
+  color: white !important;
+  border: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  background: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Remove any lines or borders from section containers */
+.section-container {
+  border: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Remove ALL decorative lines from sections - ULTIMATE OVERRIDE */
+.skills-section,
+.experience-section,
+.projects-section,
+.education-section,
+.hobbies-section,
+.contact-section,
+#skills,
+#experience,
+#projects,
+#education,
+#hobbies,
+#contact {
+  border: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.skills-section::before,
+.skills-section::after,
+.experience-section::before,
+.experience-section::after,
+.projects-section::before,
+.projects-section::after,
+.education-section::before,
+.education-section::after,
+.hobbies-section::before,
+.hobbies-section::after,
+.contact-section::before,
+.contact-section::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* ULTIMATE OVERRIDE - Force white color with maximum specificity */
+body .App .section-container .section-title,
+body .App section .section-title,
+body .App .skills-section .section-title,
+body .App .experience-section .section-title,
+body .App .projects-section .section-title,
+body .App .education-section .section-title,
+body .App .hobbies-section .section-title,
+body .App .contact-section .section-title {
+  color: white !important;
+  border: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  background: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Loading Screen */
+.loading-screen {
+  background: linear-gradient(135deg, #111A26 0%, #403E22 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(166, 142, 70, 0.3);
+  border-top: 4px solid #A68E46;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 2rem;
+}
+
+.loading-screen h2 {
+  color: #A68E46;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
