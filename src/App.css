@@ -13,6 +13,20 @@ main {
   padding-top: 6rem;
 }
 
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0.5rem;
+    padding-top: 3rem;
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -843,10 +857,12 @@ body .App .contact-section .section-title {
   
   /* Theme switcher mobile positioning */
   .theme-switcher {
-    top: 60px;
-    right: 10px;
+    top: 70px;
+    right: 15px;
     flex-direction: column;
     gap: 8px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.9);
   }
   
   .theme-btn {
@@ -973,8 +989,9 @@ body .App .contact-section .section-title {
   
   /* Theme switcher adjustments */
   .theme-switcher {
-    top: 50px;
-    right: 5px;
+    top: 60px;
+    right: 10px;
+    padding: 6px;
   }
   
   .theme-btn {
@@ -1003,8 +1020,9 @@ body .App .contact-section .section-title {
   
   /* Compact theme switcher */
   .theme-switcher {
-    top: 50px;
+    top: 60px;
     flex-direction: row;
+    padding: 6px;
   }
 }
 
