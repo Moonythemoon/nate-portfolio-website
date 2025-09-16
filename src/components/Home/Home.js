@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import RGBGlitch from '../RGBGlitch/RGBGlitch';
 import './Home.css';
 
 const Home = () => {
@@ -7,13 +8,15 @@ const Home = () => {
     <section id="home" className="home-section">
       <div className="home-content">
         <div className="home-image">
-          <div className="profile-photo">
-            <img 
-              src="/profile-photo.jpg" 
-              alt="Nathan Bussabok" 
-              className="profile-image"
-            />
-          </div>        
+          <RGBGlitch imageSrc="/profile-photo.jpg">
+            <div className="profile-photo">
+              <img 
+                src="/profile-photo.jpg" 
+                alt="Nathan Bussabok" 
+                className="profile-image"
+              />
+            </div>
+          </RGBGlitch>
         </div>
 
         <div className="home-text">
@@ -52,8 +55,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
-
     </section>
   );
 };

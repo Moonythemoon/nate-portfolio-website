@@ -5,6 +5,12 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
+/* Manga Theme Skills Styles */
+body.manga .skills-section {
+  color: #000000;
+  background: #ffffff;
+}
+
 /* Skills Navigation */
 .skills-navigation {
   display: flex;
@@ -27,6 +33,13 @@
   font-family: inherit;
 }
 
+/* Manga Theme Navigation Buttons */
+body.manga .nav-button {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
 .nav-button:hover {
   background: rgba(166, 142, 70, 0.1);
   border-color: rgba(166, 142, 70, 0.4);
@@ -37,6 +50,19 @@
   background: rgba(166, 142, 70, 0.2);
   border-color: #A68E46;
   color: #A68E46;
+}
+
+/* Manga Theme Button States */
+body.manga .nav-button:hover {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.5);
+  color: #000000;
+}
+
+body.manga .nav-button.active {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: #000000;
+  color: #000000;
 }
 
 .skills-grid {
@@ -162,50 +188,65 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .skills-section {
+    padding: 80px 15px;
+  }
+  
   .skills-navigation {
     gap: 0.5rem;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .nav-button {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    min-width: auto;
   }
 
   .skills-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
   }
 
   .skill-card {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .skill-header {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
   }
 
   .skill-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
   }
 
   .skill-name {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+
+  .skill-progress {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .summary-card {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem;
   }
 
   .summary-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .summary-card p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 

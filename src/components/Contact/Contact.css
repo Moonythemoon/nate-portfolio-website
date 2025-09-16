@@ -4,6 +4,51 @@
   color: white;
 }
 
+/* Manga Theme Contact Styles */
+body.manga .contact-section {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.manga .contact-card {
+  background: #ffffff !important;
+  border: 1px solid #000000 !important;
+  color: #000000 !important;
+}
+
+body.manga .contact-card:hover {
+  border-color: #000000 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.manga .contact-title,
+body.manga .contact-text,
+body.manga .contact-icon {
+  color: #000000 !important;
+}
+
+body.manga .contact-form input,
+body.manga .contact-form textarea {
+  background: #ffffff !important;
+  border: 1px solid #000000 !important;
+  color: #000000 !important;
+}
+
+body.manga .contact-form input:focus,
+body.manga .contact-form textarea:focus {
+  border-color: #000000 !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.manga .submit-btn {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.manga .submit-btn:hover {
+  background: #333333 !important;
+}
+
 .contact-content {
   display: grid;
   grid-template-columns: 1fr;

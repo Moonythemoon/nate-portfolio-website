@@ -7,18 +7,27 @@ import Projects from './components/Projects/Projects';
 import Education from './components/Education/Education';
 import Hobbies from './components/Hobbies/Hobbies';
 import Contact from './components/Contact/Contact';
+import CursorSpotlight from './components/CursorSpotlight/CursorSpotlight';
+import MangaLayers from './components/MangaLayers/MangaLayers';
+import ThemeSwitcher from './components/ThemeSwitcher/ThemeSwitcher';
 
 import './App.css';
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState('home');
+  const [theme, setTheme] = useState('graffiti');
 
   useEffect(() => {
     // Simulate loading time
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
+
+    // Load saved theme from localStorage
+    const savedTheme = localStorage.getItem('theme') || 'graffiti';
+    setTheme(savedTheme);
+    document.body.className = savedTheme;
 
     return () => clearTimeout(timer);
   }, []);
@@ -53,8 +62,37 @@ function App() {
     );
   }
 
+  const switchTheme = (newTheme) => {
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    document.body.className = newTheme;
+  };
+
   return (
     <div className="App">
+      {/* Theme Switcher */}
+      <ThemeSwitcher theme={theme} onThemeChange={switchTheme} />
+      
+      {/* Conditional Background Effects */}
+      {theme === 'graffiti' && (
+        <>
+          {/* Neon Fog Blobs */}
+          <div className="neon-fog-blob neon-fog-pink"></div>
+          <div className="neon-fog-blob neon-fog-cyan"></div>
+          <div className="neon-fog-blob neon-fog-purple"></div>
+          
+          {/* Cursor Spotlight */}
+          <CursorSpotlight />
+        </>
+      )}
+      
+      {theme === 'manga' && (
+        <>
+          {/* Manga Layers */}
+          <MangaLayers />
+        </>
+      )}
+      
       <Header onPageChange={setCurrentPage} currentPage={currentPage} />
       <main>
         {renderPage()}

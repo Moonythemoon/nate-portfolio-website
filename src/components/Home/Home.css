@@ -1,6 +1,6 @@
 .home-section {
-  background: linear-gradient(135deg, #111A26 0%, #403E22 100%);
-  color: white;
+  background: transparent;
+  color: var(--fg);
   position: relative;
   padding-top: 100px;
 }
@@ -84,9 +84,13 @@
 }
 
 .btn-social:hover {
-  background: rgba(220, 230, 242, 0.3);
+  background: rgba(255, 59, 240, 0.1);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.2),
+    0 0 calc(15px * var(--neon-thickness)) var(--neon-pink),
+    0 0 calc(20px * var(--neon-thickness)) var(--neon-cyan);
+  border-color: var(--neon-pink);
 }
 
 .btn-secondary {
@@ -109,14 +113,15 @@
   margin-right: 0;
 }
 
+/* Profile Image Styles */
 .profile-photo {
+  position: relative;
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  position: relative;
-  z-index: 2;
   overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  z-index: 10;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
@@ -125,6 +130,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  filter: contrast(1.1) brightness(1.05);
 }
 
 .floating-elements {
@@ -245,8 +251,8 @@
 /* Responsive design */
 @media (max-width: 1024px) {
   .home-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    flex-direction: column;
+    gap: 2rem;
     text-align: center;
   }
 
@@ -265,26 +271,38 @@
 }
 
 @media (max-width: 768px) {
-  .home-title {
-    font-size: 2.5rem;
+  .home-section {
+    padding-top: 120px; /* Account for mobile header */
+  }
+  
+  .home-content {
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
 
-  .home-subtitle {
-    font-size: 1.4rem;
+  .home-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .home-description {
     font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
   }
 
   .home-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
   }
 
   .btn-social {
-    width: 200px;
+    width: 100%;
+    max-width: 280px;
     justify-content: center;
+    padding: 12px 20px;
+    font-size: 16px;
   }
 
   .profile-photo {
@@ -298,12 +316,28 @@
 }
 
 @media (max-width: 480px) {
-  .home-title {
-    font-size: 2rem;
+  .home-section {
+    padding-top: 100px;
+  }
+  
+  .home-content {
+    gap: 1rem;
+    padding: 0 0.5rem;
   }
 
-  .home-subtitle {
-    font-size: 1.2rem;
+  .home-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .home-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-social {
+    padding: 10px 16px;
+    font-size: 14px;
   }
 
   .profile-photo {

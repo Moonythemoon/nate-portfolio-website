@@ -4,6 +4,29 @@
   color: white;
 }
 
+/* Manga Theme Hobbies Styles */
+body.manga .hobbies-section {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.manga .hobby-card {
+  background: #ffffff !important;
+  border: 1px solid #000000 !important;
+  color: #000000 !important;
+}
+
+body.manga .hobby-card:hover {
+  border-color: #000000 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.manga .hobby-title,
+body.manga .hobby-description,
+body.manga .hobby-icon {
+  color: #000000 !important;
+}
+
 .hobbies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

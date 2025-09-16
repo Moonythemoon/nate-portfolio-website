@@ -5,6 +5,59 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
+/* Manga Theme Experience Styles */
+body.manga .experience-section {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Override all gold colors in Experience section */
+body.manga .timeline::before {
+  background: #000000 !important;
+}
+
+body.manga .timeline-item::before {
+  background: #000000 !important;
+  border: 4px solid #ffffff !important;
+}
+
+body.manga .timeline-content {
+  background: #ffffff !important;
+  border: 1px solid #000000 !important;
+  color: #000000 !important;
+}
+
+body.manga .timeline-content:hover {
+  border-color: #000000 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.manga .experience-title,
+body.manga .experience-company,
+body.manga .experience-date,
+body.manga .experience-description,
+body.manga .experience-skills {
+  color: #000000 !important;
+}
+
+body.manga .experience-skills .skill-tag {
+  background: rgba(0, 0, 0, 0.1) !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+}
+
+/* Override all tech tags */
+body.manga .tech-tag {
+  background: rgba(0, 0, 0, 0.1) !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+}
+
+body.manga .tech-tag:hover {
+  background: rgba(0, 0, 0, 0.2) !important;
+  color: #000000 !important;
+}
+
 .timeline {
   position: relative;
   max-width: 1000px;

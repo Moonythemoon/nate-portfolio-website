@@ -4,6 +4,63 @@
   color: white;
 }
 
+/* Manga Theme Education Styles */
+body.manga .education-section {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.manga .education-content {
+  background: #ffffff !important;
+  border: 1px solid #000000 !important;
+  color: #000000 !important;
+}
+
+body.manga .education-content:hover {
+  border-color: #000000 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.manga .education-degree,
+body.manga .education-school,
+body.manga .education-date,
+body.manga .education-description,
+body.manga .education-gpa,
+body.manga .education-skills {
+  color: #000000 !important;
+}
+
+body.manga .education-skills .skill-tag {
+  background: rgba(0, 0, 0, 0.1) !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+}
+
+body.manga .education-icon {
+  color: #000000 !important;
+}
+
+/* Override the yellow vertical line */
+body.manga .education-content::before {
+  background: #000000 !important;
+}
+
+/* Override all skill tags and tech tags */
+body.manga .skill-tag,
+body.manga .tech-tag,
+body.manga .course-tag {
+  background: rgba(0, 0, 0, 0.1) !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+}
+
+body.manga .skill-tag:hover,
+body.manga .tech-tag:hover,
+body.manga .course-tag:hover {
+  background: rgba(0, 0, 0, 0.2) !important;
+  color: #000000 !important;
+}
+
 .education-timeline {
   max-width: 900px;
   margin: 0 auto 4rem;
