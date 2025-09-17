@@ -26,21 +26,21 @@ const CursorSpotlight = () => {
         
         if (spotlightRef.current) {
           spotlightRef.current.style.background = 
-            `radial-gradient(520px circle at ${x}% ${y}%, rgba(255,255,255,var(--spot)), transparent 58%)`;
+            `radial-gradient(300px circle at ${x}% ${y}%, rgba(255,255,255,0.08), transparent 70%)`;
         }
         
         if (cyanHaloRef.current) {
-          const cyanX = x + 12;
-          const cyanY = y + 12;
+          const cyanX = x + 8;
+          const cyanY = y + 8;
           cyanHaloRef.current.style.background = 
-            `radial-gradient(520px circle at ${cyanX}% ${cyanY}%, rgba(60, 248, 255, 0.25) 0%, transparent 58%)`;
+            `radial-gradient(300px circle at ${cyanX}% ${cyanY}%, rgba(60, 248, 255, 0.06) 0%, transparent 70%)`;
         }
         
         if (pinkHaloRef.current) {
-          const pinkX = x - 12;
-          const pinkY = y - 12;
+          const pinkX = x - 8;
+          const pinkY = y - 8;
           pinkHaloRef.current.style.background = 
-            `radial-gradient(520px circle at ${pinkX}% ${pinkY}%, rgba(255, 56, 212, 0.25) 0%, transparent 58%)`;
+            `radial-gradient(300px circle at ${pinkX}% ${pinkY}%, rgba(255, 56, 212, 0.06) 0%, transparent 70%)`;
         }
       });
     };
@@ -71,7 +71,7 @@ const CursorSpotlight = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          background: 'radial-gradient(520px circle at 50% 50%, rgba(255,255,255,var(--spot)), transparent 58%)',
+          background: 'radial-gradient(300px circle at 50% 50%, rgba(255,255,255,0.08), transparent 70%)',
           pointerEvents: 'none',
           zIndex: 2,
           willChange: 'background'
@@ -87,7 +87,7 @@ const CursorSpotlight = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          background: 'radial-gradient(520px circle at 50% 50%, rgba(60, 248, 255, 0.25) 0%, transparent 58%)',
+          background: 'radial-gradient(300px circle at 50% 50%, rgba(60, 248, 255, 0.06) 0%, transparent 70%)',
           pointerEvents: 'none',
           zIndex: 1,
           mixBlendMode: 'screen',
@@ -104,7 +104,7 @@ const CursorSpotlight = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          background: 'radial-gradient(520px circle at 50% 50%, rgba(255, 56, 212, 0.25) 0%, transparent 58%)',
+          background: 'radial-gradient(300px circle at 50% 50%, rgba(255, 56, 212, 0.06) 0%, transparent 70%)',
           pointerEvents: 'none',
           zIndex: 1,
           mixBlendMode: 'screen',
